@@ -20,4 +20,4 @@ class Ride
     end
   end
   
-end #final
+end 

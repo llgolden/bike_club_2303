@@ -1,4 +1,4 @@
-require 'rspec'
+require "rspec"
 require "./lib/ride"
 require "./lib/biker"
 
@@ -75,4 +75,4 @@ RSpec.describe Biker do
     expect(biker2.personal_record(ride1)).to eq(false)
   end
 
-end #final
+end 

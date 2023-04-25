@@ -1,4 +1,4 @@
-require 'rspec'
+require "rspec"
 require "./lib/ride"
 
 RSpec.describe Ride do
@@ -18,8 +18,4 @@ RSpec.describe Ride do
     expect(ride2.loop?).to eq(true)
     expect(ride2.total_distance).to eq(14.9)
   end
-end #final
-
-
-
-# expect().to eq()
+end

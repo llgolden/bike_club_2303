@@ -1,4 +1,4 @@
-require 'rspec'
+require "rspec"
 require "./lib/ride"
 require "./lib/biker"
 require "./lib/bike_club"
@@ -70,7 +70,7 @@ RSpec.describe BikeClub do
     expect(drinkers.best_time(ride2)).to eq(biker2)
   end
 
-  xit "can tell us which Bikers are eligible for a given Ride" do
+  it "can tell us which Bikers are eligible for a given Ride" do
     drinkers = BikeClub.new("Drinkers with a Biking Problem")
     ride1 = Ride.new({name: "Walnut Creek Trail", distance: 10.7, loop: false, terrain: :hills})
     ride2 = Ride.new({name: "Town Lake", distance: 14.9, loop: true, terrain: :gravel})
@@ -89,7 +89,7 @@ RSpec.describe BikeClub do
     biker2.log_ride(ride1, 81.1)
     biker2.log_ride(ride2, 50.9)
 
-    expect(drinkers.bikers_eligible(ride)).to eq([biker1, biker2])
+    expect(drinkers.bikers_eligible(ride1)).to eq([biker1, biker2])
   end
 
-end #final
+end 
