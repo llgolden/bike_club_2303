@@ -13,21 +13,22 @@ class Biker
   end
 
   def log_ride(ride, distance)
-    if @rides[ride] == nil
-      @rides[ride] = [distance]
-    else
-      @rides[ride].push(distance)
+    if self.acceptable_terrain.include?(ride.terrain) && 
+      self.max_distance >= ride.total_distance
+      if @rides[ride] == nil
+        @rides[ride] = [distance]
+      else
+        @rides[ride].push(distance)
+      end
     end
   end
 
-  
+  def personal_record(ride)
+    if @rides[ride] == nil
+      false
+    else 
+      @rides[ride].min
+    end
+  end
 end #final
   
-
-# Graded Items:
-
-# 1. Create a Biker with attributes and a way to read that data
-# 2. A Biker has a list of acceptable terrain and can learn new terrain
-# 3. Bikers can log a ride with a time. The Biker can keep track of all of its previous rides and times for those rides.
-# 4. A Biker will not log a ride if the ride's terrain does not match their acceptable terrain. They also won't log a ride if the ride's total distance is greater than the Biker's max distance.
-# 5. A Biker can report its personal record for a specific ride. This is the lowest time recorded for a ride. This method will return false if the Biker hasn't completed the ride
