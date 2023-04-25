@@ -47,7 +47,7 @@ RSpec.describe BikeClub do
     expect(drinkers.most_rides).to eq(biker1)
   end
 
-  xit "can tell us which Biker has the best time for a given Ride" do
+  it "can tell us which Biker has the best time for a given Ride" do
     drinkers = BikeClub.new("Drinkers with a Biking Problem")
     ride1 = Ride.new({name: "Walnut Creek Trail", distance: 10.7, loop: false, terrain: :hills})
     ride2 = Ride.new({name: "Town Lake", distance: 14.9, loop: true, terrain: :gravel})
@@ -63,7 +63,7 @@ RSpec.describe BikeClub do
     biker1.log_ride(ride2, 61.6)
     biker2.learn_terrain!(:gravel)
     biker2.learn_terrain!(:hills)
-    biker2.log_ride(ride1, 81.1)
+    biker2.log_ride(ride1, 93.1)
     biker2.log_ride(ride2, 50.9)
 
     expect(drinkers.best_time(ride1)).to eq(biker1)

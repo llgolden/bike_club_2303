@@ -15,19 +15,10 @@ class BikeClub
     @bikers.max_by { |biker| biker.rides.values.flatten.size }
   end
 
-# A `BikeClub` can tell us which Biker has logged the most rides.
-# Return value: `Biker` object
-
-
-
-  # def best_time(ride)
-
-  # end
-# A `BikeClub` can tell us which Biker has the best time for a given Ride.
-# Return value: `Biker` object
-
-
-
+  def best_time(ride)
+    @bikers.min_by { |biker| biker.personal_record(ride)}
+  end
+  
   # def bikers_eligible(ride)
 
   # end
