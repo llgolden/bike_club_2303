@@ -1,5 +1,19 @@
 # Bike Ride
 
+## Instructions
+Fork this Repository
+
+Clone your forked repo
+
+Complete the activity Below
+
+Push your solution to your repo
+
+Submit a Pull Request from your repo to this repo
+
+In your PR, please include:
+ - Your name
+ - A reflection on how you felt you did with this challenge
 
 
 ## Iteration 1 - Rides
