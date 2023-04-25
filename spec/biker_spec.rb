@@ -16,7 +16,7 @@ RSpec.describe Biker do
     expect(biker.acceptable_terrain).to eq([])
   end
 
-  xit "can learn new terrain" do
+  it "can learn new terrain" do
     biker = Biker.new("Kenny", 30) 
     expect(biker.acceptable_terrain).to eq([])
     biker.learn_terrain!(:gravel)
@@ -24,7 +24,7 @@ RSpec.describe Biker do
     expect(biker.acceptable_terrain).to eq([:gravel, :hills])
   end
 
-  xit "can log rides" do
+  it "can log rides" do
     biker = Biker.new("Kenny", 30) 
     ride1 = Ride.new({name: "Walnut Creek Trail", distance: 10.7, loop: false, terrain: :hills})
     ride2 = Ride.new({name: "Town Lake", distance: 14.9, loop: true, terrain: :gravel})

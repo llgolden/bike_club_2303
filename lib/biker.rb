@@ -8,6 +8,18 @@ class Biker
     @acceptable_terrain = []
   end
 
+  def learn_terrain!(terrain)
+    @acceptable_terrain << terrain
+  end
+
+  def log_ride(ride, distance)
+    if @rides[ride] == nil
+      @rides[ride] = [distance]
+    else
+      @rides[ride].push(distance)
+    end
+  end
+
   
 end #final
   
