@@ -12,9 +12,12 @@ class BikeClub
   end
 
   def most_rides
-
+    @bikers
+    require 'pry'; binding.pry
   end
+
 # A `BikeClub` can tell us which Biker has logged the most rides.
+# Return value: `Biker` object
 
 
 
@@ -22,6 +25,7 @@ class BikeClub
 
   # end
 # A `BikeClub` can tell us which Biker has the best time for a given Ride.
+# Return value: `Biker` object
 
 
 
@@ -30,13 +34,6 @@ class BikeClub
   # end
 
 # A `BikeClub` can tell us which Bikers are eligible for a given Ride. A Biker is eligible for a Ride if the terrain is acceptable to them and the total distance does not exceed their max distance.
+# Return value: `Array` of `Biker` objects
 
 end #final
-
-
-# | Method Name | Return Value |
-# | ----------- | ------------ |
-
-# | `most_rides` | `Biker` object |
-# | `best_time(ride)` | `Biker` object |
-# | `bikers_eligible(ride)` | `Array` of `Biker` objects |
