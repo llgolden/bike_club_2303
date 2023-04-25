@@ -29,5 +29,4 @@ class BikeClub
     end
     eligible_bikers
   end
-
 end

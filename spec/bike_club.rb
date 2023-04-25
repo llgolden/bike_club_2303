@@ -91,5 +91,4 @@ RSpec.describe BikeClub do
 
     expect(drinkers.bikers_eligible(ride1)).to eq([biker1, biker2])
   end
-
 end 
