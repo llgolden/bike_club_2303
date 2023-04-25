@@ -12,8 +12,7 @@ class BikeClub
   end
 
   def most_rides
-    @bikers
-    require 'pry'; binding.pry
+    @bikers.max_by { |biker| biker.rides.values.flatten.size }
   end
 
 # A `BikeClub` can tell us which Biker has logged the most rides.
